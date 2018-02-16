@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changing Class - Bootstrap 3 Navs Tabs Pills </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.css" rel="stylesheet" media="screen">
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<div class="container">
+<ul class="nav nav-tabs">
+  <li class="active" id="tab1"><a href="#tab_a" data-toggle="tab">Tab A</a></li>
+  <li id="tab2"><a href="#tab_b" data-toggle="tab">Tab B</a></li>
+  <li id="tab3"><a href="#tab_c" data-toggle="tab">Tab C</a></li>
+  <li id="tab4"><a href="#tab_d" data-toggle="tab">Tab D</a></li>
+</ul>
+<div class="tab-content">
+        <div class="tab-pane active" id="tab_a">
+             <h4>Pane A</h4>
+            <p id="par">Description of Tab A.</p>
+        </div>
+        <div class="tab-pane" id="tab_b">
+             <h4>Pane B</h4>
+            <p>Description of Tab B.</p>
+        </div>
+        <div class="tab-pane" id="tab_c">
+             <h4>Pane C</h4>
+            <p>Description of Tab C.</p>
+        </div>
+        <div class="tab-pane" id="tab_d">
+             <h4>Pane D</h4>
+            <p>Description of Tab D.</p>
+        </div>
+		<button onclick="changeClass()" href="#tab_b" data-toggle="tab" class="btn btn-primary">Change</button>
+</div><!-- tab content -->
+</div><!-- end of container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script type="text/javascript">
+	function changeClass()
+	{
+	//alert("Hi");
+	var tab1 = document.getElementById("tab1"); 
+	tab1.className="foo";
+	var tab2 = document.getElementById("tab2");
+	tab2.className="active";
+ 
+	document.getElementById("par").style.color="red";
+	
+	}
+	
+	</script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+  </body>
+</html>
